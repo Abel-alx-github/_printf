@@ -1,6 +1,5 @@
 #include "main.h"
 
-void print_buffer(char buffer[], int *buff_ind);
 
 /**
  * _printf - Printf function
@@ -12,6 +11,11 @@ int _printf(const char *format, ...)
 	int i, printed = 0, str_count;
 
 	va_list arr;
+
+	if (format == NULL)
+	{
+		return (-1);
+	}
 
 	va_start(arr, format);
 
