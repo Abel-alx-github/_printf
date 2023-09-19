@@ -5,7 +5,6 @@ void print_buffer(char buffer[], int *buff_ind);
 /**
  * _printf - Printf function
  * @format: format.
- * @str_count: counts the number of string
  * Return: Printed chars.
  */
 int _printf(const char *format, ...)
@@ -29,11 +28,11 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i + 1] == 's')
 		{
-			str_count = putes(va_arg(arr, char *)); /* here putes is a function that prints str_count to stdio*/
+			str_count = putes(va_arg(arr, char *));
 			i++;
 			printed  += (str_count - 1);
 		}
-		else if (format[i + 1 ] == '%')
+		else if (format[i + 1] == '%')
 		{
 			putchara('%');
 		}
